@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:18:26 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/19 10:52:13 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/19 11:19:26 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
-# include <string.h>
-
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
