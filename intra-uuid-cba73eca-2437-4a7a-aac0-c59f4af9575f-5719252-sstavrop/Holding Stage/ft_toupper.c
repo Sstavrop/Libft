@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:14:40 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/18 14:29:34 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/19 15:19:32 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_toupper(int c)
 // int main() 
 // {
 //     char test_chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*()";
-    
 //     // Test lowercase letters
 //     for (int i = 0; i < sizeof(test_chars)/sizeof(test_chars[0]); i++) {
 //         if (test_chars[i] >= 'a' && test_chars[i] <= 'z') {
