@@ -1,12 +1,6 @@
 {
 	"files.associations": {
-		"test": "c",
-		"array": "c",
-		"string_view": "c",
-		"initializer_list": "c",
-		"ranges": "c",
-		"span": "c",
-		"utility": "c",
-		"string.h": "c"
+		"stdlib.h": "c",
+		"libft.h": "c"
 	}
 }

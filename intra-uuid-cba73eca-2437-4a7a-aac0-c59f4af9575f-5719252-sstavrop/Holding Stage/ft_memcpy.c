@@ -6,55 +6,36 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:40:19 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/18 14:26:46 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/23 14:36:26 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
-// {
-// 	char	*d;
-// 	const char	*s;
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 
-// 	d = (char *) dest;
-// 	s = (const char *) src;
-// 	while (n-- > 0)
-// 	{
-// 		*d++ = *s++;
-// 	}
-// 	return (dest);
-// }
 {
 	size_t	i;
 	char	*d;
 	char	*s;
 
 	i = 0;
-	d = (char *) dest;
+	d = (char *) dst;
 	s = (char *) src;
-	while (i < n)
+	if (!dst && !src)
+	return (NULL);
+	if (d <= s && s < d + n)
+	{
+		while (i < n)
+		{
+			d[n - i - 1] = s[n - i - 1];
+			i++;
+		}
+	}
+	else while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (dest);
+	return (dst);
 }
-
-// int main() 
-// {
-//     // Allocate memory for destination and source strings
-//     char dest[50], src[50];
-
-//     // Initialize source string
-//     strcpy(src, "Hello, Malaka!");
-
-//     // Use ft_memcpy to copy src to dest
-//     ft_memcpy(dest, src, sizeof(src));
-// 	// memcpy(dest, src, sizeof(src));
-
-//     // Print the copied string
-//     printf("Copied string: %s\n", dest);
-
-//     return 0;
-// }
