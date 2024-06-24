@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:59:52 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/18 15:04:58 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/24 11:13:05 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@
 // 		return -1;
 // 	else if (*str == '+') 
 // 		return 1;
-//     return 1
+//     return 1;
 // }
 
 // static long long ss_convert_digits(const char *str)
 // {
 // 	long long base;
 // 	const char *start;
-// 	*start = str;
+// 	start = str;
 // 	base = 0;
 // }
 
@@ -45,7 +45,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	res = 0;
 	i = 0;
-	while (str[i] <= ' ' || (str[i] >= 9 && str[i] <= 13))
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -60,10 +60,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-
-// int main(void)
-// {
-//  char str[] = "-123";
-//  printf("my atoi %d \n", ft_atoi(str));
-//  printf("man atoi %d", atoi(str));
-// }

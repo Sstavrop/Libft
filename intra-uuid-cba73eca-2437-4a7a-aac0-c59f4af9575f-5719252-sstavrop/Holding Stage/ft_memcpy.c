@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:40:19 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/23 14:36:26 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/24 15:21:49 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	d = (char *) dst;
 	s = (char *) src;
 	if (!dst && !src)
-	return (NULL);
+		return (NULL);
 	if (d <= s && s < d + n)
 	{
 		while (i < n)
@@ -32,7 +32,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 			i++;
 		}
 	}
-	else while (i < n)
+	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
