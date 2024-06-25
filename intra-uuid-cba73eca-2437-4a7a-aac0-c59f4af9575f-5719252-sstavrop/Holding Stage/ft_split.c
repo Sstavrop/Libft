@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 12:17:29 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/25 18:59:55 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/25 20:30:23 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,12 @@ static	char	*extract_and_copy_word(const char *s, char c)
 
 static	void	free_allocated_memory(char **result, size_t num_words)
 {
-    char **current;
-	
+	char	**current;
+
 	current = result;
-    while (num_words--)
-        free(*current++);
-    free(result);
+	while (num_words--)
+		free(*current++);
+	free(result);
 }
 
 char	**ft_split(const char *s, char c)
@@ -85,13 +85,14 @@ char	**ft_split(const char *s, char c)
 	char		**result;
 	const char	*current_s;
 	char		*word;
+	size_t		i;
 
+	i = 0;
 	num_words = calculate_word_count(s, c);
 	result = allocate_result_array(num_words);
 	if (!result)
 		return (NULL);
-	current_s = s;
-	for (size_t i = 0; i < num_words; i++)
+	while (i < num_words)
 	{
 		current_s = skip_delimiters(current_s, c);
 		word = extract_and_copy_word(current_s, c);
