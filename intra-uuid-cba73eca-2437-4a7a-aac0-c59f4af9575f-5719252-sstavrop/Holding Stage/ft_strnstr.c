@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 14:53:20 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/24 11:34:06 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:41:47 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!little || !big)
-		return (NULL);
 	if (little[0] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)

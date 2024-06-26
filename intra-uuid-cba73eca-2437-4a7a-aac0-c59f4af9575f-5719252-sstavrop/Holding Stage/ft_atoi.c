@@ -6,35 +6,11 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:59:52 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/24 11:13:05 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:28:39 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// static int ss_skip_whitespace(const char *str)
-// {
-// 	while (*str <= ' ')
-// 		str++;
-// 	return (str);
-// }
-
-// static int ss_handle_sign(const char *str)
-// {
-// 	if (*str == '-')
-// 		return -1;
-// 	else if (*str == '+') 
-// 		return 1;
-//     return 1;
-// }
-
-// static long long ss_convert_digits(const char *str)
-// {
-// 	long long base;
-// 	const char *start;
-// 	start = str;
-// 	base = 0;
-// }
 
 int	ft_atoi(const char *str)
 {

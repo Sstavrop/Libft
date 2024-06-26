@@ -6,35 +6,26 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 16:43:54 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/19 15:32:36 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:38:12 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s)
 {
 	char	*dest;
 	size_t	i;
 
-	dest = (char *) malloc(ft_strlen(s1) + 1);
+	dest = (char *) malloc(ft_strlen(s) + 1);
 	if (!dest)
 		return (NULL);
 	i = 0;
-	while (s1[i])
+	while (s[i])
 	{
-		dest[i] = s1[i];
+		dest[i] = s[i];
 		i++;
 	}
 	dest[i] = 0;
 	return (dest);
 }
-
-// int main(void)
-// {
-// 	char *s1 = "Thanks so much!!!!!";
-// 	char *s2 = "";
-// 	s2 = ft_strdup (s1);
-// 	printf("original string: %s\n", s1);
-// 	printf("duplicated string: %s\n", s2);
-// }

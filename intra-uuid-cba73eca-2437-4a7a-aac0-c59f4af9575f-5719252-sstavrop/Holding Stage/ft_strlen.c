@@ -6,18 +6,18 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 19:53:25 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/18 14:28:40 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:39:26 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while (str[i])
 		i++;
 	return (i);
 }

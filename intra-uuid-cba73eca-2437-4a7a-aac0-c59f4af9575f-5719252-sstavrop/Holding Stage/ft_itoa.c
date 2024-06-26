@@ -6,13 +6,13 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 19:04:56 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/24 15:18:40 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/26 14:29:34 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	length(int nb)
+static unsigned int	ss_length(int nb)
 {
 	unsigned int	len;
 
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	unsigned int	nb;
 	unsigned int	len;
 
-	len = length(n);
+	len = ss_length(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);

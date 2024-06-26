@@ -6,7 +6,7 @@
 /*   By: sstavrop <sstavrop@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 12:17:29 by sstavrop          #+#    #+#             */
-/*   Updated: 2024/06/26 14:06:21 by sstavrop         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:19:37 by sstavrop         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ss_word_count(char const *s, char c)
 	return (word_count);
 }
 
-static size_t	extract_word_length(const char *s, char c)
+static size_t	ss_extract_word_length(const char *s, char c)
 {
 	size_t	len;
 
@@ -46,7 +46,7 @@ static size_t	extract_word_length(const char *s, char c)
 	return (len);
 }
 
-static char	*allocate_and_copy_word(const char *s, size_t len)
+static char	*ss_allocate_and_copy_word(const char *s, size_t len)
 {
 	char	*word;
 
@@ -58,7 +58,7 @@ static char	*allocate_and_copy_word(const char *s, size_t len)
 	return (word);
 }
 
-char	**engine(const char *s, char c, char **result, int j)
+static char	**ss_engine(const char *s, char c, char **result, int j)
 {
 	size_t	len;
 	char	*word;
@@ -71,8 +71,8 @@ char	**engine(const char *s, char c, char **result, int j)
 			s++;
 		if (!(*s))
 			break ;
-		len = extract_word_length(s, c);
-		word = allocate_and_copy_word(s, len);
+		len = ss_extract_word_length(s, c);
+		word = ss_allocate_and_copy_word(s, len);
 		if (!word)
 		{
 			while (j-- >= 0)
@@ -98,13 +98,6 @@ char	**ft_split(const char *s, char c)
 	result = malloc((j + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	result = engine(s, c, result, j);
+	result = ss_engine(s, c, result, j);
 	return (result);
 }
-
-// static void	free_result_on_error(char **result, int i)
-// {
-// 	while (--i >= 0)
-// 		free(result[i]);
-// 	free(result);
-// }
